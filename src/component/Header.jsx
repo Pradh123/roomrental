@@ -1,19 +1,15 @@
-import React from 'react';
-import { FaHeart, FaBars } from 'react-icons/fa';
+import React from "react";
+// import { FaHeart, FaBars } from 'react-icons/fa';
 
 const Header = () => {
   return (
-    <header className=' z-50  sticky top-0'>
+    <header className=" z-50  sticky top-0">
       {/* Top Section: Logo, Dropdown, and Buttons */}
       <div className="flex flex-wrap items-center justify-between p-4 bg-white shadow-sm border-b">
         <div className="flex items-center flex-shrink-0">
           {/* Logo */}
-          <img
-            src="https://www.nobroker.in/images/nobroker-logo.png"
-            alt="NoBroker"
-            className="h-8"
-          />
-          
+          <img src={"/logo.svg"} alt="NoBroker" className="h-8" />
+
           {/* Dropdown */}
           <select className="ml-4 text-gray-700 border-none focus:outline-none">
             <option value="pg/hostel">PG/Hostel</option>
@@ -25,10 +21,9 @@ const Header = () => {
         <div className="flex items-center space-x-4 mt-4 lg:mt-0">
           {/* Sign up */}
           <button className="text-gray-700">Sign up</button>
-          
+
           {/* Log in */}
           <button className="text-gray-700">Log in</button>
-          
         </div>
       </div>
 

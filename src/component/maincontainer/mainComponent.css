@@ -1,0 +1,19 @@
+  .filter {
+      @apply text-lg font-semibold text-green-600 flex justify-center items-center
+  }
+
+  .reset {
+      @apply text-sm text-blue-500 hover:underline flex justify-center text-center items-center gap-2
+  }
+
+  .utilslabel {
+      @apply flex items-center gap-2 cursor-pointer;
+  }
+
+  .utilCheckBox {
+      @apply text-green-600 focus:ring-green-500
+  }
+
+  .roomutilityborder {
+      @apply border border-slate-300;
+  }
