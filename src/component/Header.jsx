@@ -8,7 +8,7 @@ const Header = () => {
       <div className="flex flex-wrap items-center justify-between p-4 bg-white shadow-sm border-b">
         <div className="flex items-center flex-shrink-0">
           {/* Logo */}
-          <img src={"/logo.svg"} alt="NoBroker" className="h-8" />
+          <img src={"./logo.svg"} alt="NoBroker" className="h-8" />
 
           {/* Dropdown */}
           <select className="ml-4 text-gray-700 border-none focus:outline-none">

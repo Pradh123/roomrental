@@ -6,6 +6,10 @@
       @apply text-sm text-blue-500 hover:underline flex justify-center text-center items-center gap-2
   }
 
+  .utilsBorder {
+      @apply border border-slate-300;
+  }
+
   .utilslabel {
       @apply flex items-center gap-2 cursor-pointer;
   }
@@ -15,5 +19,5 @@
   }
 
   .roomutilityborder {
-      @apply border border-slate-300;
+      @apply border-2 border-slate-300 border-l-0 border-t-0 border-b-0;
   }
