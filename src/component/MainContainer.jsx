@@ -10,7 +10,10 @@ const MainContainer = () => {
   console.log(isSignUp);
 
   return (
-    <div className="flex w-full border border-red-500 justify-center">
+    <div className={`flex w-full border border-red-500 justify-center `}>
+      {isSignUp && <Signup />}
+
+      {isLogin && <Login />}
       <div className=" relative    p-5 border border-blue-500 ">
         <AsideFilter />
       </div>
