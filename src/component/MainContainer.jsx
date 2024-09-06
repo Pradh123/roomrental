@@ -4,11 +4,11 @@ import Container from "./maincontainer/Container";
 
 const MainContainer = () => {
   return (
-    <div className="flex w-full border border-red-500 justify-center">
-      <div className=" relative    p-5 border border-blue-500 ">
+    <div className="flex">
+      <div className=" sticky top-36 w-1/4 inline-block h-96">
         <AsideFilter />
       </div>
-      <div className="  w-[65%] p-4 border border-green-300 ">
+      <div className="w-3/4 ml-4">
         <Container />
       </div>
     </div>
@@ -16,3 +16,4 @@ const MainContainer = () => {
 };
 
 export default MainContainer;
+

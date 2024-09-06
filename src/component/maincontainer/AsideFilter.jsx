@@ -1,10 +1,9 @@
 import React from "react";
 import { CiFilter } from "react-icons/ci";
 import { GrPowerReset } from "react-icons/gr";
-import "./mainComponent.css";
 const AsideFilter = () => {
   return (
-    <div className="p-4 bg-white  shadow-lg rounded-lg w-full sticky top-36  ">
+    <div className="p-4 bg-white shadow-lg rounded-lg w-full">
       {/* Header Section */}
       <div className="flex justify-between items-center mb-4">
         <h1 className="filter">
