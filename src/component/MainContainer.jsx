@@ -11,14 +11,10 @@ const MainContainer = () => {
 
   return (
     <div className="flex w-full border border-red-500 justify-center">
-      {isLogin && <Login />}
-
-      {isSignUp && <Signup />}
-
       <div className=" relative    p-5 border border-blue-500 ">
         <AsideFilter />
       </div>
-      <div className="  w-[65%] p-4 border border-green-300 ">
+      <div className="w-3/4 ml-4">
         <Container />
       </div>
     </div>
