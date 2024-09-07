@@ -1,7 +1,9 @@
 import React from "react";
-// import { FaHeart, FaBars } from 'react-icons/fa';
-
+import { UserContext } from "../Context/Context";
+import { useContext } from "react";
 const Header = () => {
+  const { isLogin, setisLogin, isSignUp, setisSignUp } =
+    useContext(UserContext);
   return (
     <header className=" z-50  sticky top-0">
       {/* Top Section: Logo, Dropdown, and Buttons */}
@@ -20,10 +22,24 @@ const Header = () => {
         {/* Right Section: Buttons and Icons */}
         <div className="flex items-center space-x-4 mt-4 lg:mt-0">
           {/* Sign up */}
-          <button className="text-gray-700">Sign up</button>
+          <button
+            className="text-gray-700"
+            onClick={() => {
+              setisSignUp(!isSignUp);
+            }}
+          >
+            Sign up
+          </button>
 
           {/* Log in */}
-          <button className="text-gray-700">Log in</button>
+          <button
+            className="text-gray-700"
+            onClick={() => {
+              setisLogin(!isLogin);
+            }}
+          >
+            Log in
+          </button>
         </div>
       </div>
 
