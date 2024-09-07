@@ -1,11 +1,12 @@
 import React from "react";
 import { RoomCard } from "../RoomCard/RoomCard";
+import BottomLink from "../BottomLink/BottomLink";
 
 const Container = () => {
   return (
     <>
       <div
-        className=" p-3 border border-blue-400 bg-white 
+        className=" p-3 border bg-white 
        "
       >
         <RoomCard/>
@@ -15,6 +16,7 @@ const Container = () => {
         <RoomCard/>
         <RoomCard/>
       </div>
+      <BottomLink/>
     </>
   );
 };
