@@ -5,12 +5,15 @@ import { useContext } from "react";
 import { Login } from "./Signup&login/Login";
 import { Signup } from "./Signup&login/Signup";
 import { UserContext } from "../Context/Context";
+import SearchBar from "./SearchBar/SearchBar";
 const MainContainer = () => {
  const { isSignUp, isLogin } = useContext(UserContext);
 
 //  console.log(isSignUp)
 
   return (
+    <>
+    <SearchBar/>
     <div className="flex">
       <div className=" sticky top-36 w-1/4 inline-block h-96">
         <AsideFilter />
@@ -19,6 +22,7 @@ const MainContainer = () => {
         <Container />
       </div>
     </div>
+    </>
   );
 };
 
