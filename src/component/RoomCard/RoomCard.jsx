@@ -4,13 +4,8 @@ import { useContext } from "react";
 import { HiExternalLink } from "react-icons/hi";
 import { FaMapMarkerAlt, FaUserGraduate, FaCalendarAlt } from "react-icons/fa";
 import { GetOwnerDetails } from "../Buttons/Buttons";
-<<<<<<< HEAD
-import {Link} from 'react-router-dom'
-import img1 from './room.jpeg'
-=======
 import img1 from "./room.jpeg";
 import { UserContext } from "../../Context/Context";
->>>>>>> 7972d7fe1465dfa276078d81d1ac5db96f90265a
 export const RoomCard = () => {
   // const [OwenerDetailsPopUp, setOwenerDetailsPopUp] = useState(false);
   const { setOwenerDetailsPopUp } = useContext(UserContext);
@@ -73,22 +68,6 @@ export const RoomCard = () => {
           <div className="w-full flex border  border-gray-200 flex-col gap-2">
             {/* Tenant Preference and Post Date */}
             <div className="m-1 border">
-<<<<<<< HEAD
-            <div className="flex mx-3 my-2">
-              <Link to='/room' className="flex items-center gap-2 w-1/2">
-                <FaUserGraduate className="text-gray-600" />
-                <div className=" flex flex-col gap-1 mx-2">
-                  <p className="font-semibold">Any</p>
-                  <p className="text-gray-500 text-sm">Preferred Tenants</p>
-                </div>
-              </Link>
-              <div className=" w-0.5 bg-slate-200"></div>
-              <Link to="/room" className="flex items-center gap-2 ml-4 w-1/2">
-                <FaCalendarAlt className="text-gray-600" />
-                <div  className=" flex flex-col gap-1 mx-2">
-                  <p className="font-semibold">14 Days Ago</p>
-                  <p className="text-gray-500 text-sm">Posted On</p>
-=======
               <div className="flex mx-3 my-2">
                 <div className="flex items-center gap-2 w-1/2">
                   <FaUserGraduate className="text-gray-600" />
@@ -123,34 +102,9 @@ export const RoomCard = () => {
                     <p className="font-semibold">Not Provided</p>
                     <p className="text-gray-500 text-sm">Gate Closing Time</p>
                   </div>
->>>>>>> 7972d7fe1465dfa276078d81d1ac5db96f90265a
                 </div>
-              </Link>
+              </div>
             </div>
-<<<<<<< HEAD
-            <hr />
-            {/* Food and Gate Closing Info */}
-            <div className="flex mx-3 my-2">
-              <Link to='/room' className="flex items-center gap-2 w-1/2">
-                <div className="text-gray-600">🍴</div>
-                <div  className=" flex flex-col gap-1 mx-2">
-                  <p className="font-semibold">Breakfast, Dinner</p>
-                  <p className="text-gray-500 text-sm">Food Facility</p>
-                </div>
-              </Link>
-              <div className=" w-0.5 bg-slate-200"></div>
-              <Link to='/room' className="flex items-center gap-2 w-1/2 ml-4">
-                <div className="text-gray-600">⏰</div>
-                <div  className=" flex flex-col gap-1 mx-2">
-                  <p className="font-semibold">Not Provided</p>
-                  <p className="text-gray-500 text-sm">Gate Closing Time</p>
-                </div>
-              </Link>
-            </div>
-            </div>
-            
-=======
->>>>>>> 7972d7fe1465dfa276078d81d1ac5db96f90265a
           </div>
           {/* Get Owner Details Button */}
           <button
