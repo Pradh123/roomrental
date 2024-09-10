@@ -5,7 +5,7 @@ const Header = () => {
   const { isLogin, setisLogin, isSignUp, setisSignUp } =
     useContext(UserContext);
   return (
-    <header className=" z-50  sticky top-0">
+    <header className="z-50 sticky top-0">
       {/* Top Section: Logo, Dropdown, and Buttons */}
       <div className="flex flex-wrap items-center justify-between p-4 bg-white shadow-sm border-b">
         <div className="flex items-center flex-shrink-0">
