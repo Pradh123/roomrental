@@ -6,6 +6,7 @@ import { FaMapMarkerAlt, FaUserGraduate, FaCalendarAlt } from "react-icons/fa";
 import { GetOwnerDetails } from "../Buttons/Buttons";
 import img1 from "./room.jpeg";
 import { UserContext } from "../../Context/Context";
+import {Link} from "react-router-dom";
 export const RoomCard = () => {
   // const [OwenerDetailsPopUp, setOwenerDetailsPopUp] = useState(false);
   const { setOwenerDetailsPopUp } = useContext(UserContext);
@@ -69,40 +70,40 @@ export const RoomCard = () => {
             {/* Tenant Preference and Post Date */}
             <div className="m-1 border">
               <div className="flex mx-3 my-2">
-                <div className="flex items-center gap-2 w-1/2">
+                <Link to='/room' className="flex items-center gap-2 w-1/2">
                   <FaUserGraduate className="text-gray-600" />
                   <div className=" flex flex-col gap-1 mx-2">
                     <p className="font-semibold">Any</p>
                     <p className="text-gray-500 text-sm">Preferred Tenants</p>
                   </div>
-                </div>
+                </Link>
                 <div className=" w-0.5 bg-slate-200"></div>
-                <div className="flex items-center gap-2 ml-4 w-1/2">
+                <Link to='/room' className="flex items-center gap-2 ml-4 w-1/2">
                   <FaCalendarAlt className="text-gray-600" />
                   <div className=" flex flex-col gap-1 mx-2">
                     <p className="font-semibold">14 Days Ago</p>
                     <p className="text-gray-500 text-sm">Posted On</p>
                   </div>
-                </div>
+                </Link>
               </div>
               <hr />
               {/* Food and Gate Closing Info */}
               <div className="flex mx-3 my-2">
-                <div className="flex items-center gap-2 w-1/2">
+                <Link to='/room' className="flex items-center gap-2 w-1/2">
                   <div className="text-gray-600">🍴</div>
                   <div className=" flex flex-col gap-1 mx-2">
                     <p className="font-semibold">Breakfast, Dinner</p>
                     <p className="text-gray-500 text-sm">Food Facility</p>
                   </div>
-                </div>
+                </Link>
                 <div className=" w-0.5 bg-slate-200"></div>
-                <div className="flex items-center gap-2 w-1/2 ml-4">
+                <Link to='/room' className="flex items-center gap-2 w-1/2 ml-4">
                   <div className="text-gray-600">⏰</div>
                   <div className=" flex flex-col gap-1 mx-2">
                     <p className="font-semibold">Not Provided</p>
                     <p className="text-gray-500 text-sm">Gate Closing Time</p>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>

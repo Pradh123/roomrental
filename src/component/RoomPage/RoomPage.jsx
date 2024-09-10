@@ -1,4 +1,6 @@
 import React from "react";
+import { UserContext } from "../../Context/Context";
+import { useContext,useEffect } from "react";
 import {
   FaHome,
   FaCamera,
@@ -11,30 +13,34 @@ import {
   FaUtensils,
   FaKey,
 } from "react-icons/fa";
+import { OwnerDetails } from "../Signup&login/OwnerDetails";
+<FaHome className="text-2xl mr-2" />
 const RoomPage = () => {
+  const { setOwenerDetailsPopUp ,OwenerDetailsPopUp} = useContext(UserContext);
   return (
-    <div className="w-full mx-auto p-4">
-      <div className="flex items-center justify-between border-b pb-4">
-        <div className="flex items-center">
-          <FaHome className="text-2xl mr-2" />
-          <div>
-            <h1 className="text-xl font-bold">
-              PG For Boys In Aims Golf Avenue 1
-            </h1>
-            <p className="text-gray-600">
-              Sec 52 Metro station, Aims Golf Avenue 1
-            </p>
-          </div>
+    <div className="  bg-white mx-10">
+      {OwenerDetailsPopUp && <OwnerDetails />}
+      <div className="flex items-center justify-between border mt-3">
+        <div className="flex-4 px-6 py-5 border">
+        <FaHome className="text-2xl mr-2" />
+        <h2>PG</h2>
         </div>
-        <div className="text-right">
-          <p className="text-xl font-bold">₹15,000</p>
-          <p className="text-gray-600">Monthly Rent</p>
-          <p className="text-xl font-bold">₹30,000</p>
-          <p className="text-gray-600">Deposit</p>
-          <button className="bg-red-500 text-white px-4 py-2 mt-2">
-            Get Owner Details
-          </button>
+        <div className="flex-1 py-5 border px-2">
+          <h2 className="font-bold">PG For Boys In Aims Golf Avenue 1</h2>
+          <p>sec 52 metro station , Aims Golf Avenue 1</p>
         </div>
+        <div className="flex-3 px-6 py-5">
+          <h2 className="font-bold">15000</h2>
+          <p>Monthly Rent</p>
+        </div>
+        <div className="flex-3 border px-6 py-5">
+          <h2 className="font-bold">30000</h2>
+          <p>Deposite</p>
+        </div>
+        <div className="flex-3 px-6 py-5">
+          <button onClick={()=>setOwenerDetailsPopUp(true)} className=" cursor-pointer bg-[#fd3752] px-2 py-2">Get Owner Details</button>
+        </div>
+        
       </div>
       <div className="mt-4">
         <p className="text-gray-600">
@@ -42,30 +48,25 @@ const RoomPage = () => {
           Property Details
         </p>
       </div>
-      <div className="mt-4 flex">
+      <div className="mt-4 flex h-full">
         <div className="w-2/3">
-          <div className="relative">
+          <div className="relative flex">
+            <div>
             <img
               src="https://placehold.co/600x400"
               alt="Room image"
               className="w-full h-auto"
             />
+            
             <button className="absolute top-4 left-4 bg-gray-800 text-white px-4 py-2 flex items-center">
               <FaCamera className="mr-2" /> Photos
             </button>
-            <button className="absolute top-4 left-24 bg-gray-800 text-white px-4 py-2 flex items-center">
+            <button className="absolute top-4 left-24 bg-gray-800 text-white mx-10 px-4 py-2 flex items-center">
               <FaMapMarkerAlt className="mr-2" /> Location
             </button>
-            <button className="absolute top-4 right-4 bg-gray-800 text-white px-4 py-2 flex items-center">
-              <FaHeart className="mr-2" /> Shortlist
-            </button>
-          </div>
-          <div className="grid grid-cols-2 gap-2 mt-2">
-            <img
-              src="https://placehold.co/300x200"
-              alt="Room image"
-              className="w-full h-auto"
-            />
+           
+            </div>
+            <div className="flex flex-col mx-2">
             <img
               src="https://placehold.co/300x200"
               alt="Room image"
@@ -82,38 +83,68 @@ const RoomPage = () => {
               </div>
             </div>
           </div>
+            
+          </div>
+          
         </div>
         <div className="w-1/3 pl-4">
           <div className="border p-4">
-            <div className="flex justify-between items-center mb-2">
-              <span className="flex items-center">
-                <FaUserTie className="mr-2" /> Professional
-              </span>
-              <span className="flex items-center">
-                <FaCalendarAlt className="mr-2" /> Aug 11, 2024
-              </span>
+            <div className="border">
+            <div className="flex justify-between items-center border-b mb-2">
+              <div className="flex items-center border-r px-2 py-3 w-1/2">
+
+                <FaUserTie className="mr-2" />
+                <div className="px-2">
+                  <p>Professional</p>
+                  <p>Prefered Tenant</p>
+                  </div> 
+              </div>
+              <div className="flex items-center px-2 py-3 w-1/2">
+                <FaCalendarAlt className="mr-2" />
+                <div className="mr-2">
+                  <p>Aug 11, 2024</p>
+                  <p>Posted On</p>
+                  </div> 
+              </div> 
+              
+            </div>
+            <div className="flex justify-between items-center border-b mb-2">
+              <div className="flex items-center border-r px-2 py-3 w-1/2">
+                <FaCar className="mr-2" />
+                <div className="px-2">
+                  <p> Car</p>
+                  <p>Parking</p>
+                  </div> 
+              </div>
+              <div className="flex items-center px-2 py-3 w-1/2">
+                <FaClock className="mr-2" />
+                <div className="px-2">
+                  <p> Immediately</p>
+                  <p>Possesion</p>
+                  </div>  
+              </div>
             </div>
             <div className="flex justify-between items-center mb-2">
-              <span className="flex items-center">
-                <FaCar className="mr-2" /> Car
-              </span>
-              <span className="flex items-center">
-                <FaClock className="mr-2" /> Immediately
-              </span>
+              <div className="flex items-center border-r px-2 py-3 w-1/2">
+                <FaUtensils className="mr-2" />
+                <div className=" px-2">
+                  <p> Not Available</p>
+                  <p>Food Facility</p>
+                  </div> 
+              </div>
+              <div className="flex items-center px-2 py-3 w-1/2">
+                <FaKey className="mr-2" />
+                <div className=" px-2">
+                  <p> Not Provided</p>
+                  <p>Gate Closing Time</p>
+                  </div>  
+              </div>
             </div>
-            <div className="flex justify-between items-center mb-2">
-              <span className="flex items-center">
-                <FaUtensils className="mr-2" /> Not Available
-              </span>
-              <span className="flex items-center">
-                <FaKey className="mr-2" /> Not Provided
-              </span>
             </div>
-            <button className="bg-red-500 text-white w-full py-2 mt-4">
+            <button onClick={()=>setOwenerDetailsPopUp(true)} className="bg-red-500 cursor-pointer text-white w-full py-2 mt-4">
               Get Owner Details
             </button>
-          </div>
-          <div className="border p-4 mt-4">
+            <div className="border p-4 mt-4">
             <p className="text-gray-600">
               Report what was not correct in this property
             </p>
@@ -123,6 +154,8 @@ const RoomPage = () => {
               <button className="border px-4 py-2">Wrong Info</button>
             </div>
           </div>
+          </div>
+          
         </div>
       </div>
     </div>
