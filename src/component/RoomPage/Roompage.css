@@ -1,0 +1,7 @@
+.RoomSharingcard {
+    @apply text-[25px] font-semibold border-2 border-red-500 border-l-0 border-t-0 border-r-0 m-3 p-2;
+}
+
+.itemsDetails {
+    @apply w-[50%] flex justify-between items-center mt-1 p-1;
+}

@@ -2,7 +2,7 @@
 import React from "react";
 import AsideFilter from "./maincontainer/AsideFilter";
 import Container from "./maincontainer/Container";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Login } from "./Signup&login/Login";
 import { Signup } from "./Signup&login/Signup";
 import { UserContext } from "../Context/Context";
@@ -22,6 +22,10 @@ const MainContainer = () => {
             {OwenerDetailsPopUp && <OwnerDetails />}
           </div>
         )}
+        <div>
+          {isSignUp && <Signup />}
+          {isLogin && <Login />}
+        </div>
 
         <div className=" sticky top-36 w-1/4 inline-block h-96">
           <AsideFilter />
