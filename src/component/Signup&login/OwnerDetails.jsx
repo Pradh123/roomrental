@@ -11,7 +11,6 @@ export const OwnerDetails = () => {
       document.body.classList.remove("overflow-hidden");
     };
   }, []);
-
   return (
     <>
       {/* Background overlay */}
@@ -27,7 +26,6 @@ export const OwnerDetails = () => {
               setOwenerDetailsPopUp(false);
             }}
           />
-
           {/* Left section */}
           <div className="bg-slate-200 w-[40%] flex flex-col  h-[490px] gap-[20px] rounded-l-lg p-5">
             <MdContactPhone className="w-[100px] h-[100px]" />

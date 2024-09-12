@@ -2,7 +2,7 @@ import React from "react";
 import { UserContext } from "../Context/Context";
 import { useContext } from "react";
 const Header = () => {
-  const { isLogin, setisLogin, isSignUp, setisSignUp } =
+  const { setOwenerDetailsPopUp, OwenerDetailsPopUp  } =
     useContext(UserContext);
   return (
     <header className="z-50 sticky top-0">
@@ -24,9 +24,9 @@ const Header = () => {
           {/* Sign up */}
           <button className=" bg-[#009587] px-4 py-1 rounded-md hover:bg-[#007a6f] ">Post Your Room</button>
           <button
-            className="text-gray-700"
+            className="text-gray-700 cursor-pointer"
             onClick={() => {
-              setisSignUp(!isSignUp);
+              setOwenerDetailsPopUp(true);
             }}
           >
             Sign up
@@ -34,9 +34,9 @@ const Header = () => {
 
           {/* Log in */}
           <button
-            className="text-gray-700"
+            className="text-gray-700 cursor-pointer"
             onClick={() => {
-              setisLogin(!isLogin);
+              setOwenerDetailsPopUp(true);
             }}
           >
             Log in
