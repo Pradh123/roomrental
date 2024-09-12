@@ -6,14 +6,15 @@ import { FaMapMarkerAlt, FaUserGraduate, FaCalendarAlt } from "react-icons/fa";
 import { GetOwnerDetails } from "../Buttons/Buttons";
 import img1 from "./room.jpeg";
 import { UserContext } from "../../Context/Context";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 export const RoomCard = () => {
   // const [OwenerDetailsPopUp, setOwenerDetailsPopUp] = useState(false);
   const { setOwenerDetailsPopUp } = useContext(UserContext);
 
   return (
-    <div className="flex flex-col border border-gray-300  shadow-md  mt-4 ">
+    <div className=" flex flex-col border border-gray-300  shadow-md  mt-4     ">
       {/* Title and External Link */}
+
       <div className="  bg-slate-100">
         <div className="flex flex-col px-4 my-3">
           <div className="flex items-center gap-1 my-3 text-lg font-semibold">
@@ -70,7 +71,7 @@ export const RoomCard = () => {
             {/* Tenant Preference and Post Date */}
             <div className="m-1 border">
               <div className="flex mx-3 my-2">
-                <Link to='/room' className="flex items-center gap-2 w-1/2">
+                <Link to="/room" className="flex items-center gap-2 w-1/2">
                   <FaUserGraduate className="text-gray-600" />
                   <div className=" flex flex-col gap-1 mx-2">
                     <p className="font-semibold">Any</p>
@@ -78,7 +79,7 @@ export const RoomCard = () => {
                   </div>
                 </Link>
                 <div className=" w-0.5 bg-slate-200"></div>
-                <Link to='/room' className="flex items-center gap-2 ml-4 w-1/2">
+                <Link to="/room" className="flex items-center gap-2 ml-4 w-1/2">
                   <FaCalendarAlt className="text-gray-600" />
                   <div className=" flex flex-col gap-1 mx-2">
                     <p className="font-semibold">14 Days Ago</p>
@@ -89,7 +90,7 @@ export const RoomCard = () => {
               <hr />
               {/* Food and Gate Closing Info */}
               <div className="flex mx-3 my-2">
-                <Link to='/room' className="flex items-center gap-2 w-1/2">
+                <Link to="/room" className="flex items-center gap-2 w-1/2">
                   <div className="text-gray-600">🍴</div>
                   <div className=" flex flex-col gap-1 mx-2">
                     <p className="font-semibold">Breakfast, Dinner</p>
@@ -97,7 +98,7 @@ export const RoomCard = () => {
                   </div>
                 </Link>
                 <div className=" w-0.5 bg-slate-200"></div>
-                <Link to='/room' className="flex items-center gap-2 w-1/2 ml-4">
+                <Link to="/room" className="flex items-center gap-2 w-1/2 ml-4">
                   <div className="text-gray-600">⏰</div>
                   <div className=" flex flex-col gap-1 mx-2">
                     <p className="font-semibold">Not Provided</p>

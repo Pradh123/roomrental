@@ -1,4 +1,11 @@
+import { useEffect } from "react";
 export const Login = () => {
+  useEffect(() => {
+    document.body.classList.add("overflow-hidden");
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, []);
   return (
     <div className=" signUpform   ">
       <div

@@ -19,6 +19,10 @@ const MainContainer = () => {
             {OwenerDetailsPopUp && <OwnerDetails />}
           </div>
         )}
+        <div>
+          {isSignUp && <Signup />}
+          {isLogin && <Login />}
+        </div>
 
         <div className=" sticky top-36 w-1/4 inline-block h-96">
           <AsideFilter />

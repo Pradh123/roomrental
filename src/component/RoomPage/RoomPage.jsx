@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import { UserContext } from "../../Context/Context";
 import { useContext, useEffect } from "react";
@@ -5,7 +6,6 @@ import {
   FaHome,
   FaCamera,
   FaMapMarkerAlt,
-  FaHeart,
   FaUserTie,
   FaCalendarAlt,
   FaCar,
