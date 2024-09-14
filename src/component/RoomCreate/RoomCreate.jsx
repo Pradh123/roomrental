@@ -13,9 +13,9 @@ import {
 
 const RoomCreate = () => {
   return (
-    <div className="flex ">
+    <div className="flex h-[90vh] border border-red-500 ">
       {/* Side Navigation */}
-      <div className="bg-gray-800 text-white w-64  flex flex-col justify-between">
+      <div className="bg-gray-800 text-white w-64  h-[90vh] flex flex-col justify-between">
         <div className="sticky top-16">
           <div className="flex items-center justify-between p-4 border-b border-gray-700">
             <span className="text-lg font-semibold">Side Menu</span>
@@ -58,21 +58,20 @@ const RoomCreate = () => {
             </Link>
           </nav>
           <div className="flex justify-around p-4  pt-14 mt-9 border-t border-gray-700">
-          <a href="#" className="text-gray-400 hover:text-white">
-            <FaFacebookF />
-          </a>
-          <a href="#" className="text-gray-400 hover:text-white">
-            <FaTwitter />
-          </a>
-          <a href="#" className="text-gray-400 hover:text-white">
-            <FaInstagram />
-          </a>
-          <a href="#" className="text-gray-400 hover:text-white">
-            <FaYoutube />
-          </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <FaTwitter />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <FaInstagram />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <FaYoutube />
+            </a>
+          </div>
         </div>
-        </div>
-        
       </div>
 
       {/* Main Content */}

@@ -3,11 +3,10 @@ import { UserContext } from "../Context/Context";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 const Header = () => {
-  const { setOwenerDetailsPopUp, OwenerDetailsPopUp  } =
-    useContext(UserContext);
+  const { setOwenerDetailsPopUp, OwenerDetailsPopUp } = useContext(UserContext);
 
   return (
-    <header className="z-50 sticky top-0">
+    <header className="z-50 sticky top-0  h-[10vh]  border border-blue-500">
       {/* Top Section: Logo, Dropdown, and Buttons */}
       <div className="flex flex-wrap items-center justify-between p-4 bg-white shadow-sm border-b">
         <div className="flex items-center flex-shrink-0">
@@ -26,7 +25,10 @@ const Header = () => {
         {/* Right Section: Buttons and Icons */}
         <div className="flex items-center space-x-4 mt-4 lg:mt-0">
           {/* Sign up */}
-          <Link to="/admin/user" className=" bg-[#009587] px-4 mx-8 py-1 rounded-md hover:bg-[#007a6f] ">
+          <Link
+            to="/admin/user"
+            className=" bg-[#009587] px-4 mx-8 py-1 rounded-md hover:bg-[#007a6f] "
+          >
             Post Your Room
           </Link>
           {/* <button

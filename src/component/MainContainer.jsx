@@ -13,17 +13,13 @@ const MainContainer = () => {
     <>
       <SearchBar />
       <div className="flex">
-        {OwenerDetailsPopUp && (
-            <OwnerDetails />
-        )}
-        <div>
-          
-        </div>
+        {OwenerDetailsPopUp && <OwnerDetails />}
+        <div></div>
 
         <div className=" sticky top-36 w-1/4 inline-block h-96">
           <AsideFilter />
         </div>
-        <div className="w-3/4 mt-2 ml-4">
+        <div className="w-3/4  ml-4">
           <Container />
         </div>
       </div>
