@@ -1,20 +1,29 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/img-redundant-alt */
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { HiExternalLink } from "react-icons/hi";
 import { FaMapMarkerAlt, FaUserGraduate, FaCalendarAlt } from "react-icons/fa";
 import { GetOwnerDetails } from "../Buttons/Buttons";
-import img1 from "./room.jpeg";
 import { UserContext } from "../../Context/Context";
 import { Link } from "react-router-dom";
+import images from "../Images/Images";
+
 export const RoomCard = () => {
-  // const [OwenerDetailsPopUp, setOwenerDetailsPopUp] = useState(false);
   const { setOwenerDetailsPopUp } = useContext(UserContext);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // Set interval to change image every 3 seconds
+    const id = setInterval(() => {
+      setCount((prevCount) => (prevCount >= images.length - 1 ? 0 : prevCount + 1));
+    }, 2000);
+
+    // Clear the interval when component unmounts
+    return () => clearInterval(id);
+  }, [count]);
+  console.log(count)
 
   return (
-    <div className=" flex flex-col border border-gray-300  shadow-md  mt-4     ">
+    <div className=" flex flex-col border border-gray-300  shadow-md  mt-4">
       {/* Title and External Link */}
-
       <div className="  bg-slate-100">
         <div className="flex flex-col px-4 my-3">
           <div className="flex items-center gap-1 my-3 text-lg font-semibold">
@@ -53,17 +62,17 @@ export const RoomCard = () => {
           </div>
         </div>
       </div>
-
       <hr />
       {/* Lower Section */}
       <div className="flex bg-gray-50">
         {/* Image Section */}
-        <div className="w-1/3">
+        <div className="w-1/3 relative">
           <img
-            src={img1}
+            src={images[count]}
             alt="Room Image"
-            className="h-full w-full object-cover"
+            className=" h-60 w-80 object-cover"
           />
+          <p className=" absolute right-1 bottom-1 bg-black bg-opacity-50  px-1 rounded-sm">{count+1}/5</p>
         </div>
         {/* Details Section */}
         <div className="flex-1 flex flex-col justify-between p-4 bg-white">

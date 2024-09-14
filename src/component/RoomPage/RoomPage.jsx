@@ -25,11 +25,16 @@ import {
 } from "react-icons/fa";
 import { OwnerDetails } from "../Signup&login/OwnerDetails";
 import BottomLink from "../BottomLink/BottomLink";
+import ImageSlider from "../ImageSlider/ImageSlider";
+import images from "../Images/Images";
 <FaHome className="text-2xl mr-2" />;
 const RoomPage = () => {
   const [input, setinput] = useState("");
   const [review, setreview] = useState([" This product is verey very good"]);
-
+  const [sliderBool,setSliderBool]=useState(false);
+  const handleClickForSlider=()=>{
+    setSliderBool(true);
+  }
   const handleReview = () => {
     console.log(review);
     console.log(input);
@@ -189,7 +194,8 @@ const RoomPage = () => {
   ];
 
   const { setOwenerDetailsPopUp, OwenerDetailsPopUp } = useContext(UserContext);
-  return (
+  return (<>
+  {sliderBool&&<ImageSlider setSliderBool={setSliderBool}/>}
     <div>
       <div className="bg-white mx-10 ">
         {OwenerDetailsPopUp && <OwnerDetails />}
@@ -248,7 +254,7 @@ const RoomPage = () => {
                   alt="Room image"
                   className="w-full h-auto"
                 />
-                <div className="relative">
+                <div onClick={handleClickForSlider} className="relative cursor-pointer">
                   <img
                     src="https://placehold.co/300x200"
                     alt="Room image"
@@ -493,6 +499,7 @@ const RoomPage = () => {
         <BottomLink />
       </div>
     </div>
+    </>
   );
 };
 
