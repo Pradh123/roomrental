@@ -7,7 +7,6 @@ import { UserContext } from "../Context/Context";
 import SearchBar from "./SearchBar/SearchBar";
 import { OwnerDetails } from "./Signup&login/OwnerDetails";
 const MainContainer = () => {
-  const { isSignUp, isLogin } = useContext(UserContext);
   const { OwenerDetailsPopUp } = useContext(UserContext);
 
   return (
@@ -15,13 +14,10 @@ const MainContainer = () => {
       <SearchBar />
       <div className="flex">
         {OwenerDetailsPopUp && (
-          <div className="signUpform  sticky">
-            {OwenerDetailsPopUp && <OwnerDetails />}
-          </div>
+            <OwnerDetails />
         )}
         <div>
-          {isSignUp && <Signup />}
-          {isLogin && <Login />}
+          
         </div>
 
         <div className=" sticky top-36 w-1/4 inline-block h-96">

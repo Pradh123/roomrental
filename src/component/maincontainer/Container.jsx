@@ -5,7 +5,7 @@ import BottomLink from "../BottomLink/BottomLink";
 const Container = () => {
   return (
     <>
-      <div className=" sticky">
+      <div className=" sticky z-10">
         {[1, 2, 3, 4, 4, 5].map((data) => (
           <RoomCard />
         ))}

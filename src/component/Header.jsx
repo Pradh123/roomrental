@@ -26,27 +26,27 @@ const Header = () => {
         {/* Right Section: Buttons and Icons */}
         <div className="flex items-center space-x-4 mt-4 lg:mt-0">
           {/* Sign up */}
-          <button className=" bg-[#009587] px-4 py-1 rounded-md hover:bg-[#007a6f] ">
+          <Link to="/admin/user" className=" bg-[#009587] px-4 mx-8 py-1 rounded-md hover:bg-[#007a6f] ">
             Post Your Room
-          </button>
-          <button
+          </Link>
+          {/* <button
             className="text-gray-700 cursor-pointer"
             onClick={() => {
               setOwenerDetailsPopUp(true);
             }}
           >
             Sign up
-          </button>
+          </button> */}
 
           {/* Log in */}
-          <button
+          {/* <button
             className="text-gray-700 cursor-pointer"
             onClick={() => {
               setOwenerDetailsPopUp(true);
             }}
           >
             Log in
-          </button>
+          </button> */}
         </div>
       </div>
 

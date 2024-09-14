@@ -147,7 +147,7 @@ const RoomPage = () => {
               >
                 Get Owner Details
               </button>
-              <div className="border p-4 mt-4">
+              <div className= "border p-4 mt-4">
                 <p className="text-gray-600">
                   Report what was not correct in this property
                 </p>
@@ -198,6 +198,40 @@ const RoomPage = () => {
           
         </div>
       </div>
+      <div className="mx-11">
+      {/* <div className="flex flex-col gap-6 w-2/3">
+          <div className=" border bg-white flex flex-col py-8 gap-5 px-4">
+            <p className=" underline decoration-red-700 text-xl font-bold underline-offset-8">
+              Double Sharing Room Details
+            </p>
+            <div className=" flex">
+              <div className="flex w-1/2 gap-4">
+                <p>Rent for double Occupancy</p>
+                <p className=" font-semibold">₹ 8,000/M</p>
+              </div>
+              <div className="flex w-1/2 gap-4">
+                <p>Rent for double Occupancy</p>
+                <p className=" font-semibold">₹ 8,000/M</p>
+              </div>
+            </div>
+          </div>
+          <div className=" border bg-white flex flex-col py-8 gap-5 px-4">
+            <p className=" underline decoration-red-700 text-xl font-bold underline-offset-8">
+              Triple Sharing Room Details
+            </p>
+            <div className=" flex">
+              <div className="flex w-1/2 gap-4">
+                <p>Rent for double Occupancy</p>
+                <p className=" font-semibold">₹ 8,000/M</p>
+              </div>
+              <div className="flex w-1/2 gap-4">
+                <p>Rent for double Occupancy</p>
+                <p className=" font-semibold">₹ 8,000/M</p>
+              </div>
+            </div>
+          </div>
+        </div> */}
+    </div>
     </div>
   );
 };
