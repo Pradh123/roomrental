@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import { UserContext } from "../../Context/Context";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import {
   FaRegUser,
   FaPhoneAlt,
@@ -27,6 +27,16 @@ import { OwnerDetails } from "../Signup&login/OwnerDetails";
 import BottomLink from "../BottomLink/BottomLink";
 <FaHome className="text-2xl mr-2" />;
 const RoomPage = () => {
+  const [input, setinput] = useState("");
+  const [review, setreview] = useState([" This product is verey very good"]);
+
+  const handleReview = () => {
+    console.log(review);
+    console.log(input);
+    setinput("");
+    setreview([...review, input]);
+  };
+  console.log(review);
   const Activitycard = [
     {
       icon: <FaRegUser className="  text-[25px] font-semibold" />,
@@ -406,7 +416,7 @@ const RoomPage = () => {
           <div className=" border bg-white p-3 mt-3">
             <h1 className=" font-semibold text-[20px] p-3 w-full text-center mt-3">
               {" "}
-              Activity On this Property <hr className=" mt-2 h-1" />
+              Similar <hr className=" mt-2 h-1" />
             </h1>
             <div className=" flex flex-wrap gap-4 mt-4">
               {SimilarProductcard.map((Data, i) => (
@@ -453,13 +463,29 @@ const RoomPage = () => {
       </div>
       <div className=" mt-3  mx-10 border border-red-500 min-h-[60vh] bg-slate-50 relative">
         <h1 className=" text-center font-bold"> Rate And Review</h1>
+        <div className="bg-white p-3 w-[90%] m-auto rounded-md border border-slate-300 ">
+          {review.map((text, i) => (
+            <div key={i}>
+              <span>{text}</span>
+            </div>
+          ))}
+        </div>
+
         <section className=" w-full flex  justify-center ">
           <div className=" w-[80%] rounded-3xl  shadow-xl  flex absolute bottom-3 bg-white justify-between items-center  p-2 ">
             <input
               type="text"
               className=" w-[70%]   p-1 rounded-3xl outline-none  "
+              value={input}
+              onChange={(e) => {
+                e.preventDefault();
+                setinput(e.target.value);
+              }}
             />
-            <FaArrowCircleUp className=" text-[30px] bg-white  cursor-pointer " />
+            <FaArrowCircleUp
+              className=" text-[30px] bg-white  cursor-pointer "
+              onClick={handleReview}
+            />
           </div>
         </section>
       </div>
