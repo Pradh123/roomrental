@@ -317,7 +317,7 @@ const RoomPage = () => {
               >
                 Get Owner Details
               </button>
-              <div className="border p-4 mt-4">
+              <div className= "border p-4 mt-4">
                 <p className="text-gray-600">
                   Report what was not correct in this property
                 </p>
