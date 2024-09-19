@@ -3,7 +3,7 @@ import React from "react";
 const RoomDetails = () => {
   return (
     <div className=" p-10">
-      <h1 className="sm:text-[25px] font-semibold   text-center">
+      <h1 className="sm:text-[25px] font-semibold  text-center">
         {" "}
         Property details
       </h1>

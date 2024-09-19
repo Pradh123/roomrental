@@ -5,11 +5,9 @@ import { GetOwnerDetails } from "../Buttons/Buttons";
 import { UserContext } from "../../Context/Context";
 import { Link } from "react-router-dom";
 import images from "../Images/Images";
-
 export const RoomCard = () => {
-  const { setOwenerDetailsPopUp } = useContext(UserContext);
-  const [count, setCount] = useState(0);
-
+ const { setOwenerDetailsPopUp } = useContext(UserContext);
+ const [count, setCount] = useState(0);
   useEffect(() => {
     // Set interval to change image every 3 seconds
     const id = setInterval(() => {
